@@ -32,5 +32,8 @@
 @import "./contato/contato.css";
 @import "./contato/lojas.css";
 
+/* orçamento */
+@import "./orçamento/orçamento.css";
+
 /* termos */
 @import "./termos/termos.css";
