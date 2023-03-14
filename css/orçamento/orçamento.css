@@ -33,7 +33,8 @@
 
 .orçamento-produto {
   border-radius: 5px 0 0 5px;
-  background: var(--cor-12);
+  background: var(--cor-12) url("../../img/dec/bottom-left.svg") no-repeat
+    bottom 20px left 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -108,15 +109,66 @@
 
 .orçamento-dados {
   border-radius: 0 5px 5px 0;
-  background: var(--cor-0);
+  background: var(--cor-0) url("../../img/dec/bottom-right.svg") no-repeat
+    bottom 20px right 20px;
 }
 
-.orçamento-conteudo h2 {
-  margin-top: 20px;
+.orçamento-conteudo {
+  display: none;
 }
 
 #bikcraft:checked ~ #orçamento-bikcraft,
 #seguro:checked ~ #orçamento-seguro {
   display: grid;
   gap: 20px;
+}
+
+.orçamento-detalhes {
+  display: none;
+  background: var(--cor-0);
+  padding: 20px;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.orçamento-detalhes li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.orçamento-detalhes li img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+.orçamento-produto input:checked + label + .orçamento-detalhes {
+  display: grid;
+}
+
+@media (max-width: 1200px) {
+  .orçamento-produto,
+  .orçamento-dados {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 800px) {
+  .orçamento {
+    grid-template-columns: 1fr;
+  }
+  .orçamento-produto {
+    border-radius: 5px 5px 0 0;
+    background: var(--cor-12);
+  }
+  .orçamento-dados {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .orçamento-produto {
+    grid-template-columns: 1fr;
+  }
 }
