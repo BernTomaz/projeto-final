@@ -44,7 +44,7 @@ function eventosPerguntas(pergunta) {
 
 perguntas.forEach(eventosPerguntas);
 
-//galeria de Bicicletas
+// Galeria de Bicicletas
 const galeria = document.querySelectorAll(".bicicleta-imagens img ");
 const galeriaContainer = document.querySelector(".bicicleta-imagens");
 
@@ -62,3 +62,8 @@ function eventosGaleria(img) {
 }
 
 galeria.forEach(eventosGaleria);
+
+// Animação
+if (window.SimpleAnime) {
+  new SimpleAnime();
+}
